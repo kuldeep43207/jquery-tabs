@@ -1,0 +1,83 @@
+<html>
+	<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	
+	<style>
+		#Sec{
+			display:none;
+		}
+		
+		#third{
+			display:none;
+		}
+		
+		.active{
+			display:block !important;
+		}
+		
+		.disabled{
+			display:none !important;
+		}
+		
+	</style>
+	
+		<script>
+			
+			$(document).ready(function(){
+				$(".btn1").click(function(){
+					$("#first").addClass("active");
+					$("#first").removeClass("disabled");
+					$("#sec").addClass("disabled");
+					$("#sec").removeClass("active");
+					$("#third").addClass("disabled");
+					$("#third").removeClass("active");
+				});
+			});
+					
+		
+			$(document).ready(function(){
+				$(".btn2").click(function(){
+					$("#first").removeClass("active");
+					$("#first").addClass("disabled");
+					$("#sec").addClass("active");
+					$("#sec").removeClass("disabled");
+					$("#third").addClass("disabled");
+					$("#third").removeClass("active");
+				});
+			});
+
+			$(document).ready(function(){
+				$(".btn3").click(function(){
+					$("#first").removeClass("active");
+					$("#first").addClass("disabled");
+					$("#sec").removeClass("active");
+					$("#sec").addClass("disabled");
+					$("#third").addClass("active");
+					$("#third").removeClass("disabled");
+					
+				});
+			});
+		</script>
+		
+	
+	</head>
+	
+	<body>
+
+		<button type="button" id="first_tab" class="btn1"> First</button>
+		<button type="button" id="sec_tab" class="btn2"> Sec</button>
+		<button type="button" id="third_tab" class="btn3"> Third</button>
+		
+		<div id="first">
+			<h3>First tab</h3>
+		</div>
+		<div id="sec">
+			<h3>Second tab</h3>
+		</div>
+		
+		<div id="third">
+			<h3>Third tab</h3>
+		</div>
+	</body>
+	
+</html>
